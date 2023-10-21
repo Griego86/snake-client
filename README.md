@@ -18,7 +18,7 @@ Before you can run this client, you will need to be running the server side whic
 `w`: Moving Up \
 `a`: Moving Left \
 `s`: Moving Down \
-`d`: Moving right
+`d`: Moving Right
 
 ### Sending Messages
 
