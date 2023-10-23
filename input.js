@@ -13,8 +13,7 @@ const setupInput = function (conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
 
-
-  const handleUserInput = (connection) => {
+  stdin.on("data", handleUserInput = (connection) => {
     //equal to ctrl + C
     if (connection === '\u0003') { 
       console.log("Thanks for playing.");
@@ -28,15 +27,12 @@ const setupInput = function (conn) {
     }
 
     for (let key in messages) {
-      if (connection === message) {
+      if (connection === key) {
           conn.write(`Say: ${messages[key]}`);
       }
     }
-  };
-
-  stdin.on("data", handleUserInput);
+  });
   return stdin;
-
 };
 
 module.exports = {
