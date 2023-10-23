@@ -27,11 +27,9 @@ const setupInput = function (conn) {
       }
     }
 
-    for (let message in messages) {
+    for (let key in messages) {
       if (connection === message) {
-        setTimeout( () => {
-          conn.write(`Say: ${messages}`);
-        }, 1000);
+          conn.write(`Say: ${messages[key]}`);
       }
     }
   };
